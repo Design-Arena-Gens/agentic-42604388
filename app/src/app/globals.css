@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --background: {BACKGROUND_HEX};
+  --foreground: {NEUTRAL_HEX};
+  --radius-2xl: 1.75rem;
+  --radius-3xl: 2.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-2xl: var(--radius-2xl);
+  --radius-3xl: var(--radius-3xl);
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.95) 0%, var(--background) 55%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 20, 20, 0.16);
+  border-radius: 999px;
+}
+
+main {
+  min-height: 100vh;
+  background: transparent;
+}
